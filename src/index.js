@@ -10,6 +10,8 @@ const client = new ApolloClient({
   uri: "https://w5xlvm3vzz.lp.gql.zone/graphql"
 })
 
+import styles from 'Styles/main.scss'
+
 render(
   <ApolloProvider client={client}>
     <App />

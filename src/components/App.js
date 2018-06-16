@@ -1,18 +1,15 @@
 import React from 'react'
 
-class App extends React.Component {
-  
-  constructor(props) {
-    super(props);
-  }
+import ExchangeRates from 'Containers/ExchangeRates'
 
-  render() {
-    return (
-      <React.Fragment>
-        <h1>Starterkit</h1>
-      </React.Fragment>
-    )
-  }
+const App = () => {
+  return (
+    <React.Fragment>
+      <h1>Starterkit</h1>
+      <ExchangeRates />
+    </React.Fragment>
+  )
+
 }
 
 export default App

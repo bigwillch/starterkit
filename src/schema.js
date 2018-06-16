@@ -11,14 +11,14 @@ export const typeDefs = `
 `
 
 export const mocks = {
-  Query: {
+  Query: () => ({
     rates: (currency) => (
      [
        { currency: "EX1", rate: 6.66 },
        { currency: "EX2", rate: 4.56 }
      ] 
     )
-  },
+  }),
   // ExchangeRate: {
   //   name: async ({ currency }) => {
   //     try {

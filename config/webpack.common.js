@@ -11,6 +11,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: "javascript/auto",
+      },
+      {
         test: /\.(js|jsx)$/,
         use: "babel-loader",
         exclude: /node_modules/
@@ -51,7 +56,8 @@ module.exports = {
       Containers: path.resolve(__dirname, '../src/components/containers'),
       Presentational: path.resolve(__dirname, '../src/components/presentational'),
       Styles: path.resolve(__dirname, '../src/styles'),
-      Fonts: path.resolve(__dirname, '../src/fonts')
+      Fonts: path.resolve(__dirname, '../src/fonts'),
+      Src: path.resolve(__dirname, '../src')
     }
   },
   plugins: [

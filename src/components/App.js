@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ExchangeRates from 'Containers/ExchangeRates'
+import ExchangeRates from 'Src/components/examples/exchangerates/ExchangeRates'
 
 const App = () => {
   return (

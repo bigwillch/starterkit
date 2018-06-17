@@ -5,7 +5,7 @@ casual.seed(123);
 
 export const typeDefs = `
   type Query {
-    rates: [ExchangeRate]
+    rates(currency: String): [ExchangeRate]
   }
 
 	type ExchangeRate {

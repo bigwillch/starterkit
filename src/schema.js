@@ -1,11 +1,11 @@
 import { MockList } from 'graphql-tools';
 import casual from 'casual-browserify'
 
-// casual.seed(123); 
+casual.seed(123);
 
 export const typeDefs = `
   type Query {
-    rates(currency: String!): [ExchangeRate]
+    rates: [ExchangeRate]
   }
 
 	type ExchangeRate {
@@ -17,7 +17,7 @@ export const typeDefs = `
 
 export const mocks = {
   Query: () => ({
-    rates: (currency) => new MockList([10, 20])
+    rates: (root, { currency }) => new MockList(casual.integer(20,50))
   }),
   ExchangeRate: () => ({
     currency: casual.currency_code,

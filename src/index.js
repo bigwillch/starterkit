@@ -10,11 +10,11 @@ import mockClient from 'Src/mockClient'
 
 import App from './components/App'
 
-// const client = new ApolloClient({
-//   uri: "https://w5xlvm3vzz.lp.gql.zone/graphql"
-// })
+let client = new ApolloClient({
+  uri: "https://w5xlvm3vzz.lp.gql.zone/graphql"
+})
 
-const client = mockClient
+client = mockClient
 
 
 render(

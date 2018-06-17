@@ -16,10 +16,12 @@ const ExchangeRates = () => (
   >
     {({ loading, error, data }) => {
       if (loading) return <p>Loading...</p>;
-      if (error) return <p>Error :(</p>;
-console.log(data)
-      return data.rates.map(({ currency, rate }) => (
-        <div key={currency}>
+      if (error) {
+        console.log(error) 
+        return <p>Error :(</p>;
+      }
+      return data.rates.map(({ currency, rate }, index) => (
+        <div key={index}>
           <p>{`${currency}: ${rate}`}</p>
         </div>
       ));

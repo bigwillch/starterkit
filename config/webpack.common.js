@@ -35,6 +35,15 @@ module.exports = {
         }]
       },
       {
+        test: /\.tag$/,
+        exclude: /node_modules/,
+        loader: 'riot-tag-loader',
+        query: {
+          type: 'es6', // transpile the riot tags using babel
+          hot: true
+        }
+      },
+      {
         test: /\.(woff|woff2)$/,
         use: [{
           loader: 'file-loader',
@@ -50,6 +59,7 @@ module.exports = {
     alias: {
       Containers: path.resolve(__dirname, '../src/components/containers'),
       Presentational: path.resolve(__dirname, '../src/components/presentational'),
+      Tags: path.resolve(__dirname, '../src/tags'),
       Styles: path.resolve(__dirname, '../src/styles'),
       Fonts: path.resolve(__dirname, '../src/fonts')
     }
